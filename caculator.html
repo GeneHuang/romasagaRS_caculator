@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RWD</title>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js'></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+   <link rel="stylesheet" href="./css/caculator.css">
+ 
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo"><a href="javascript:void" target="_blank"><img src="https://dummyimage.com/100x100/333/fff.png" alt=""></a></div>
+            <div class="menu">
+                <!-- ul>li*4>a>p{item$$$} -->
+                <ul>
+                    <li>
+                        <a href="">
+                            <p>item001</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>item002</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>item003</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p>item004</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section sect1">
+                <form action="">
+                <label for="s1" class="s1"><p>技能1</p><input type="number" name="s1" value="" placeholder="3-5" min="3" max="5"><p class="short">忽略：</p><input type="checkbox" id='ignore1' name="ignore1" value="Y" > <p class="short">覺醒：</p><input type="checkbox" id='s1ul' name="s1u1" value="Y" > </label>
+                <label for="s2" class="s2"><p>技能2</p><input type="number" name="s2" value="" placeholder="6-10" min="6" max="10"><p class="short">忽略：</p><input type="checkbox" id='ignore2' name="ignore2" value="Y" > <p class="short">覺醒：</p><input type="checkbox" name="s2u1" value="Y" ><input type="checkbox" name="s2u2" value="Y" ></label>
+                <label for="s3" class="s3"><p>技能3</p><input type="number" name="s3" value="" placeholder="11-16" min="11" max="16"><p class="short">忽略：</p><input type="checkbox" id='ignore3' name="ignore3" value="Y" > <p class="short">覺醒：</p><input type="checkbox" name="s3u1" value="Y" ><input type="checkbox" name="s3u2" value="Y" ><input type="checkbox" name="s3u3" value="Y" ></label>
+                <label for="s4" class="s4"><p>引繼技(4)</p><input type="number" name="s4" value="" placeholder="3-16" min="3" max="16"><p class="short">忽略：</p><input type="checkbox" id='ignore4' name="ignore4" value="Y" > <p class="short">覺醒：</p><input type="checkbox" name="s4u1" value="Y" ><input type="checkbox" name="s4u2" value="Y" ><input type="checkbox" name="s4u3" value="Y" ></label>
+                <label for="haveBP1"><p>有BP+1被動:</p> <input type="checkbox" name="haveBP1" ></label>
+                <label for="haveBP1"><i>*角色技能為パリィ或是回復，請勾選"忽略"</i></label>
+                </form>
+                <div class="panel">
+                <input type="button" class="btn" value="リセット" onclick="javascript:reset();">
+                <input type="button" class="btn" value="計算する" onclick="javascript:caculate();"></div>
+                <div class="display">
+                <table>
+                        <tr class="title">
+                                <th class="left">Round</th>
+                                <th>01</th>
+                                <th>02</th>
+                                <th>03</th>
+                                <th>04</th>
+                                <th>05</th>
+                                <th>06</th>
+                                <th>07</th>
+                                <th>08</th>
+                                <th>09</th>
+                                <th>10</th>
+                                <th>11</th>
+                                <th>12</th>
+                                <th>13</th>
+                                <th>14</th>
+                                <th>15</th>
+                                <th>16</th>
+                                <th>17</th>
+                                <th>18</th>
+                                <th>19</th>
+                                <th>20</th>
+     
+                        </tr>
+                        <tr class="skill">
+                               <td class="left">スキル</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                               <td>&nbsp;</td>
+                        </tr>
+                            <tr class="bp">
+                                    <td class="left">BP</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                            </tr>
+                            <tr class="plus">
+                                    <td class="left">+1</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                            </tr>
+                            
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <!-- <div class="copyright"><p></p></div> -->
+        </div>
+    </div>
+    <script>
+        var step =20;
+        var nowstep = 0;
+        var BPinit =10; // init;
+        var BPpt =3 ; //per turn;
+        var BPplusRate = 0.25 // 
+        var BPnow = BPinit;
+        var arrBP =[];
+        var arrSkill =[];
+        var arrStep =[];
+        var arrPlus =[];
+        var s1=0,s2=0,s3=0,s4=0;
+        $('form').on('input',function(){
+            initSkill();
+        });
+        initSkill();
+
+        function caculate(){
+            nowstep = 0;
+            BPnow =BPinit;
+            initSkill();
+            while(nowstep <step){
+            var s =checkSkill(BPnow);
+
+            console.log(s);
+            arrStep.push(s[0]);
+
+            BPnow = BPnow - s[1];
+            
+
+            if ($('input[name=haveBP1]:checked').length == 1) {
+                if (Math.random() <= 0.25) {
+                    BPnow+=1;
+                    console.log(nowstep+":+1")
+                    arrPlus.push("+1");
+                }else{
+                    arrPlus.push("　");
+                }
+                
+            }else{
+                arrPlus.push("　");
+            }
+            
+
+            arrBP.push(BPnow);
+
+            nowstep++;
+            addBP();
+            }
+        
+            displayStep();
+        }
+
+        function initSkill(){
+            arrBP =[];
+            arrSkill =[];
+            arrStep =[];
+            arrPlus =[];
+            s1= parseInt($('input[name=s1]').val());
+            if ($('input[name=s1u1]:checked').length == 1) s1-=1;
+
+            s2= parseInt($('input[name=s2]').val());
+            if ($('input[name=s2u1]:checked').length == 1) s2-=1;
+            if ($('input[name=s2u2]:checked').length == 1) s2-=1;
+
+            s3= parseInt($('input[name=s3]').val());
+            if ($('input[name=s3u1]:checked').length == 1) s3-=1;
+            if ($('input[name=s3u2]:checked').length == 1) s3-=1;
+            if ($('input[name=s3u3]:checked').length == 1) s3-=1;
+
+            s4= parseInt($('input[name=s4]').val());
+            if ($('input[name=s4u1]:checked').length == 1) s4-=1;
+            if ($('input[name=s4u2]:checked').length == 1) s4-=1;
+            if ($('input[name=s4u3]:checked').length == 1) s4-=1;
+            arrSkill=[];
+            s1 =(isNaN(s1)) ? 0 :s1;
+            s2 =(isNaN(s2)) ? 0 :s2;
+            s3 =(isNaN(s3)) ? 0 :s3;
+            s4 =(isNaN(s4)) ? 0 :s4;
+
+            if ($('input[name=ignore1]:checked').length == 1) s1=0;
+            if ($('input[name=ignore2]:checked').length == 1) s2=0;
+            if ($('input[name=ignore3]:checked').length == 1) s3=0;
+            if ($('input[name=ignore4]:checked').length == 1) s4=0;
+            arrSkill.push(s1,s2,s3,s4);
+        }
+
+        function checkSkill(BPnow){
+            var index=-1;
+            var maxBP =0;
+            for(var ii=0;ii<4;ii++){
+                if (arrSkill[ii] != 0){
+                    if (arrSkill[ii]<=BPnow){
+                        if (arrSkill[ii] >= maxBP){
+                            maxBP = arrSkill[ii];
+                            index =ii;
+                        }
+                    }
+                }
+            }
+
+            return [index,maxBP];
+        }
+
+        function addBP(){
+            BPnow+=BPpt;
+        }
+
+        function displayStep(){
+            var s_str='<td class="left">スキル</td>';
+            var b_str='<td class="left">BP</td>';
+            var p_str='<td class="left">+1</td>';
+            for (var ii=0;ii<step;ii++){
+                var stext='';
+                var s =arrStep[ii];
+                if ( s == -1) stext='○';
+                if ( s == 0) stext='一';
+                if ( s == 1) stext='二';
+                if ( s == 2) stext='三';
+                if ( s == 3) stext='四';
+                s_str += '<td class="s'+ (s+1)+'">'+stext+'</td>';
+                b_str += '<td class="s'+ (s+1)+'">'+arrBP[ii]+'</td>';
+                p_str += '<td class="s'+ (s+1)+'">'+arrPlus[ii]+'</td>';
+            }
+
+            $('.skill').html(s_str);
+            $('.bp').html(b_str);
+            $('.plus').html(p_str);
+            
+        }
+
+        function reset(){
+            $('form')[0].reset();
+        }
+    </script>
+</body>
+</html>

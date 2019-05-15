@@ -1,0 +1,336 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+/* line 5, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* width */
+/* line 4, ../scss/libs/_webkit.scss */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+/* line 9, ../scss/libs/_webkit.scss */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+/* line 14, ../scss/libs/_webkit.scss */
+::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+/* Handle on hover */
+/* line 19, ../scss/libs/_webkit.scss */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+/* line 25, ../scss/libs/_webkit.scss */
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ccc;
+  opacity: 1;
+  /* Firefox */
+}
+
+/* line 30, ../scss/libs/_webkit.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ccc;
+}
+
+/* line 34, ../scss/libs/_webkit.scss */
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #ccc;
+}
+
+/* line 11, ../scss/caculator.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #999;
+}
+
+/* line 17, ../scss/caculator.scss */
+.dfont, a, p, li {
+  font-size: 16px;
+  color: font_color;
+  line-height: 1.5;
+  font-family: Noto Sans TC,Microsoft JhengHei;
+}
+
+/* line 25, ../scss/caculator.scss */
+a {
+  display: inline-block;
+}
+
+/* line 28, ../scss/caculator.scss */
+div {
+  border: 1px solid #999;
+}
+
+/* line 39, ../scss/caculator.scss */
+.menu > ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* line 43, ../scss/caculator.scss */
+.menu > ul li {
+  display: inline-block;
+}
+
+/* line 49, ../scss/caculator.scss */
+div {
+  box-sizing: border-box;
+}
+
+/* line 54, ../scss/caculator.scss */
+label {
+  width: 100%;
+  display: block;
+}
+/* line 58, ../scss/caculator.scss */
+label p {
+  width: 130px;
+  margin-left: 20px;
+}
+/* line 61, ../scss/caculator.scss */
+label p.short {
+  width: auto;
+}
+/* line 66, ../scss/caculator.scss */
+label i {
+  color: #f00;
+  padding: 0px 5px;
+  margin: 30px 0;
+}
+/* line 72, ../scss/caculator.scss */
+label input[type=number] {
+  width: 60px;
+  padding: 3px 5px;
+}
+/* line 77, ../scss/caculator.scss */
+label input[type=checkbox] {
+  width: 20px;
+  padding: 3px 5px;
+}
+/* line 82, ../scss/caculator.scss */
+label p, label input {
+  display: inline-block;
+}
+
+/* line 90, ../scss/caculator.scss */
+.s0 {
+  background-color: #ccc;
+}
+
+/* line 94, ../scss/caculator.scss */
+.s1 {
+  background-color: #faa;
+}
+
+/* line 97, ../scss/caculator.scss */
+.s2 {
+  background-color: #afa;
+}
+
+/* line 101, ../scss/caculator.scss */
+.s3 {
+  background-color: #aaf;
+}
+
+/* line 105, ../scss/caculator.scss */
+.s4 {
+  background-color: #ffa;
+}
+
+/* line 109, ../scss/caculator.scss */
+.display {
+  width: 100%;
+  min-height: 200px;
+  overflow-x: scroll;
+}
+/* line 115, ../scss/caculator.scss */
+.display table tbody th, .display table tbody tr, .display table tbody td {
+  border: 1px solid #333;
+}
+/* line 124, ../scss/caculator.scss */
+.display table tbody td, .display table tbody th {
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+}
+/* line 129, ../scss/caculator.scss */
+.display table tbody td.left, .display table tbody th.left {
+  text-align: left;
+  background-color: #eee;
+}
+/* line 135, ../scss/caculator.scss */
+.display table tbody th {
+  background-color: #ccc;
+}
+
+/* line 142, ../scss/caculator.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+/* line 146, ../scss/caculator.scss */
+html .wrapper, body .wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+}
+/* line 151, ../scss/caculator.scss */
+html .wrapper .header, body .wrapper .header {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+/* line 157, ../scss/caculator.scss */
+html .wrapper .header .logo, body .wrapper .header .logo {
+  margin-left: 20px;
+}
+/* line 166, ../scss/caculator.scss */
+html .wrapper .content, body .wrapper .content {
+  min-width: 360px;
+  max-width: 800px;
+  background-color: transparent;
+  height: auto;
+  margin: 0 auto;
+  background-color: #fff;
+}
+/* line 173, ../scss/caculator.scss */
+html .wrapper .content .section, body .wrapper .content .section {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+/* line 182, ../scss/caculator.scss */
+html .wrapper .content .section.front, body .wrapper .content .section.front {
+  z-index: 100;
+}
+/* line 186, ../scss/caculator.scss */
+html .wrapper .content .section.back, body .wrapper .content .section.back {
+  z-index: -1;
+  background-color: #000000;
+  position: fixed;
+}
+/* line 192, ../scss/caculator.scss */
+html .wrapper .content .section .item, body .wrapper .content .section .item {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+}
+/* line 197, ../scss/caculator.scss */
+html .wrapper .content .section .item.itm1, body .wrapper .content .section .item.itm1 {
+  left: 10%;
+  top: 20%;
+  background-color: #ff0000;
+}
+/* line 203, ../scss/caculator.scss */
+html .wrapper .content .section .item.itm2, body .wrapper .content .section .item.itm2 {
+  left: 30%;
+  top: 60%;
+  background-color: #00ff00;
+}
+/* line 209, ../scss/caculator.scss */
+html .wrapper .content .section .item.itm3, body .wrapper .content .section .item.itm3 {
+  left: 70%;
+  top: 10%;
+  background-color: #0000ff;
+}
+/* line 215, ../scss/caculator.scss */
+html .wrapper .content .section .item.none, body .wrapper .content .section .item.none {
+  display: none;
+}
+
+/* line 227, ../scss/caculator.scss */
+.panel {
+  width: 100%;
+  text-align: center;
+  padding: 30px 10%;
+}
+/* line 231, ../scss/caculator.scss */
+.panel .btn {
+  padding: 3px 30px;
+  color: #fff;
+  background-color: #333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 30px;
+  text-align: center;
+  display: inline-block;
+}

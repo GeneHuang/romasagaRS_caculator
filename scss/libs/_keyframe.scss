@@ -1,0 +1,191 @@
+@import "compass/css3";
+@keyframes brightUp {
+    0%{
+        @include filter(brightness(0.5));
+
+    }
+    100% {
+        @include filter(brightness(1.0));
+    }
+}
+
+@keyframes brightDown {
+    0%{
+        @include filter(brightness(1.0));
+    
+       
+
+    }
+    100% {
+        @include filter(brightness(0.5));
+    }
+}
+
+@keyframes MoveUpDown {
+    0%{
+      top: -180px;
+    }
+    100% {
+      top: 0;
+    }
+}
+
+@keyframes MoveUp {
+    0%{
+      
+      top: 0px;
+    }
+    100% {
+      top: -180;
+    }
+}
+
+
+@keyframes MoveAndFadeLeft {
+    0%{
+      left:100vw;
+      @include opacity(0);
+    }
+    100% {
+        left:0;
+        @include opacity(1);
+    }
+}
+
+@keyframes MoveRight {
+    0%{
+        left:0;
+        @include opacity(1);
+    }
+    80%{
+        left:90vw;
+        @include opacity(0.9);
+    }
+    100% {
+        left:100vw;
+        @include opacity(0);
+    }
+}
+
+
+@keyframes fadIn {
+    0%{
+        transform: scale(1.0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+      opacity: 100;
+    }
+}
+
+@keyframes fadOut {
+    0%{
+        transform: scale(1);
+        opacity: 100;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+@keyframes strechup {
+    0%{
+      
+        height: 0;
+    }
+    100% {
+        
+        height: 100vh;
+    }
+}
+
+
+@keyframes foldup {
+    0%{
+        height: 100vh;
+    }
+    100% {
+        
+        height: 0;
+    }
+}
+
+
+
+@keyframes focus {
+    0%{
+      
+        transform: scale(1);
+        @include filter(brightness(0.8));
+    }
+    100% {
+        
+        transform: scale(1.1);
+        @include filter(brightness(1));
+    }
+}
+
+
+@keyframes blur {
+    0%{
+      
+        transform: scale(1.1);
+        @include filter(brightness(1));
+    }
+    100% {
+        
+        transform: scale(1);
+        @include filter(brightness(0.8));
+    }
+}
+
+@keyframes txthighlight {
+    0%{
+      
+        // text-decoration: none;
+        color: #373737;
+        // padding: 0 12px;
+    }
+    100% {
+        
+        // text-decoration: underline;
+        background-color:#e60012;
+
+        color: #fff;
+        // background-color: #ff0000;
+    }
+}
+
+
+@keyframes jumpRight{
+
+    0%{
+        right: 5px;
+    }
+    50% {
+        right: 1px;
+    }
+    100%{
+        right: 5px;
+    }
+}
+
+@keyframes jumpLeft{
+
+    0%{
+        left: 5px;
+    }
+    50% {
+        left: 1px;
+    }
+    100%{
+        left: 5px;
+    }
+}

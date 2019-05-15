@@ -1,0 +1,241 @@
+@charset 'utf-8';
+@import "compass/css3";
+@import "compass/reset";
+@import "libs/_parameters"; // parameters
+@import "libs/_webkit"; //webkit custom
+// @import "libs/_keyframe"; //animations
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 1px solid #999;
+}
+
+.dfont{
+    font-size: 16px;
+    color:font_color;
+    line-height: 1.5;
+    font-family: Noto Sans TC,Microsoft JhengHei;
+
+}
+
+a{
+    display: inline-block;
+}
+div{
+    border: 1px solid #999;
+}
+a,p,li{
+    @extend .dfont;
+    
+    &:hover{
+       // color:$font_highlight_color;
+    }
+}
+
+.menu>ul{
+    position: absolute;
+    top: 0;
+    right: 0;
+    li{
+        display: inline-block;
+    
+    }
+}
+
+div{
+    box-sizing: border-box;
+    
+}
+
+label{
+    width: 100%;
+    display: block;
+    
+    p{
+        width: 130px;
+        margin-left: 20px;
+        &.short{
+            width: auto;
+        }
+    }
+
+    i{
+        color:#f00;
+        padding:0px 5px;
+        margin: 30px 0;
+    }
+
+    input[type=number]{
+        width: 60px;
+        padding: 3px 5px;
+    }
+
+    input[type=checkbox]{
+        width: 20px;
+        padding: 3px 5px;
+    }
+
+    p,input{
+        display: inline-block;
+        
+    }
+
+
+}
+
+.s0{
+    background-color: #ccc;
+}
+
+.s1{
+    background-color: #faa;
+}
+.s2{
+    background-color: #afa;
+}
+
+.s3{
+    background-color: #aaf;
+}
+
+.s4{
+    background-color: #ffa;
+}
+
+.display{
+    width: 100%;
+    min-height: 200px;
+    overflow-x: scroll;
+    table{
+        tbody{
+        th,tr,td{
+            border:1px solid #333;
+            
+        }
+
+        tr{
+
+        }
+
+        td,th{
+            font-size: 20px;
+            padding: 5px;
+            text-align: center;
+
+            &.left{
+                text-align: left;
+                background-color: #eee;
+            }
+        }
+
+        th{
+            background-color: #ccc;
+        }
+        }
+    }
+}
+
+html,body{
+width: 100%;
+    height: 100%;
+
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        background-color: #000;
+        .header{
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: auto;
+            background-color: $header_bgcolor;
+            .logo{
+                margin-left: $header_logo_marginLeft;
+                
+            }
+
+            .item{}
+        }
+
+
+        .content{
+             min-width: $content_min_width;
+            max-width: $content_max_width;
+            background-color:$conetent_bgcolor;
+            height: auto;
+            margin: 0 auto;
+            background-color: #fff;
+            .section{
+                height: auto;
+                min-height: $section_min_height;
+                width: 100%;
+                overflow-y:scroll;
+                overflow-x: hidden;
+                position: relative;
+               
+
+                &.front{
+                    z-index: 100;
+                }
+
+                &.back{
+                    z-index: -1;
+                    background-color: #000000;
+                    position: fixed;
+                }
+
+                .item{
+                    position: absolute;
+                    width: 20%;
+                    height: 20%;
+                    
+                    &.itm1{
+                        left: 10%;
+                        top:20%;
+                        background-color: #ff0000;
+                    }
+
+                    &.itm2{
+                        left: 30%;
+                        top: 60%;
+                        background-color: #00ff00;
+                    }
+
+                    &.itm3{
+                        left: 70%;
+                        top: 10%;
+                        background-color: #0000ff;
+                    }
+
+                    &.none{
+                        display: none;
+                    }
+
+                }
+
+            }
+        }
+        
+    }
+}
+
+.panel{
+    width: 100%;
+    text-align: center;
+    padding:30px 10%;
+.btn{
+    padding: 3px 30px;
+    color:#fff;
+    background-color: #333;
+    @include border-radius(5px);
+    margin:0 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+}

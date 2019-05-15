@@ -1,0 +1,36 @@
+
+//Custom ScrollBar
+/* width */
+::-webkit-scrollbar {
+    width: $scroll_bar_width;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background:$scroll_bar_track;
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: $scroll_bar_thumb;
+ }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $scroll_bar_hover;
+}
+
+
+//INPUT 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: $input_color;
+	opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: $input_color;
+}
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+	color: $input_color;
+}
